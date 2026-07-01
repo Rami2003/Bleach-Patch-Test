@@ -13,7 +13,9 @@
 # cross-compile. CI (.github/workflows/build.yml) builds Windows + Linux.
 
 import os
-from PyInstaller.utils.hooks import collect_all
+import sys
+import importlib.util
+from PyInstaller.utils.hooks import collect_all, collect_submodules
 
 datas, binaries, hiddenimports = [], [], []
 
@@ -24,6 +26,28 @@ for pkg in ("pygame",):
     datas += d
     binaries += b
     hiddenimports += h
+
+# --- IMPORTANT ---------------------------------------------------------------
+# The real launcher code is DOWNLOADED at runtime, so PyInstaller can't see its
+# imports at build time. To keep the frozen runtime able to run current *and*
+# future launcher code without rebuilding, we bundle the entire standard
+# library plus every tkinter sub-module (filedialog, messagebox, ttk, ...).
+_SKIP = {"antigravity", "this", "idlelib", "lib2to3", "test", "turtledemo",
+         "tkinter"}  # tkinter handled via collect_submodules below
+for _mod in sorted(getattr(sys, "stdlib_module_names", ())):
+    if _mod.startswith("_") or _mod in _SKIP:
+        continue
+    try:
+        if importlib.util.find_spec(_mod) is not None:   # present on THIS OS
+            hiddenimports.append(_mod)
+    except Exception:
+        pass  # some modules can't be probed; skip them
+
+hiddenimports += collect_submodules("tkinter")
+# belt-and-suspenders: the sub-modules the launcher imports today
+hiddenimports += [
+    "tkinter", "tkinter.filedialog", "tkinter.messagebox", "tkinter.ttk",
+]
 
 # bundle the updater module so the very first launch (empty payload) can update
 datas += [("updater.py", ".")]
