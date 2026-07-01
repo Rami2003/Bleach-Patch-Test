@@ -1,0 +1,857 @@
+Bros Community Patch
+
+UNIVERSAL CHANGES : 
+
+Fighting spirit generated when dying : 0.5 -> 0.1
+Fighting spirit generated when hitting your opponent : 1.5 -> 2.5
+Fighting spirit generated when getting hit by your opponent : 1.75 -> 1.15
+Fighting spirit generated when hitting someone blocking : 1.25 -> 1
+Fighting spirit generated when blocking an attack : 1 -> 0.5
+Fighting spirit generated when holding the dash button : 0.0012 -> 0.0050
+Fighting Spirit gained from yellow reverse : 0.001 -> 0.0005
+
+
+Blue Reverse range increased from 5 -> 20 and size *4 times bigger to make it fullscreen
+White Reverse hitstun reduced: 35 -> 34 (white -> tier 1 light doesn't combo anymore)
+Yellow Reverse guardstun reduced from 14 -> 12 to remove yellow unblockable setups
+White Reverse guardstun reduced from 31 -> 29 to remove yellow white setups
+
+
+Kira : 
+Base and Evo :
+	Fixed a bug where he would be able to cancel the following whiffed button into Hakugeki : dash light, light1, heavy 1
+
+Yamamoto (changes made by Nilsix): 
+BASE AND EVO : 
+	
+	Sig : 
+		rotateSpeed -> speed rate : 1 -> 0
+		Fixed an issue where yamamoto would hit sig from behind against an imperfect flashstep
+	
+	SP2 : 
+		pushback on hit 0.2->5
+		Yamamoto cannot combo after SP2 anymore
+	
+
+	EVO : 
+		Tilt : 
+			slow_motion_rate 0.2 -> 1
+			Yamamoto got his old tilt speed back
+			hi03 and hi03_2 Burn Gauge generation (add_unique_value) reduced from 0.2 + 0.2 -> 0.15 + 0.15
+
+		SP1 (charged) :
+			damage value : 400 -> 200
+	
+	Known issue : 
+		his SP2 can whiff up close against someone grabbing at the same time, this will be fixed in the future 
+			
+	
+
+Kaien : 
+	Flashstep on block : 
+		minus -> 0 on block
+
+Renji Abarai (changes made by Bergen):
+Giant Form:
+	Reduced chip damage during SP2 active for heavy 1, heavy 2 and signature (0.5 -> 0.15)
+Weakened Form:
+	increased weakened form hp from 9000 -> 9500 to match komamura's
+	Reduced damage from 1200 -> 780 
+	increased hitstun on last hit from 30 -> 50 and reduced recovery on a landed counter to make it combo.
+	increased recovery on a whiffed counter from 60 -> 70
+	
+
+Shikai Ichigo (changes made by Bergen):
+evo:	
+	Fighting Spirit required to reach sublimation increased from 3.5 -> 5.9
+	increased sp1(non-white) damage by 15% 
+	decreased sp1(white) damage by 70%
+	increase sp1(white) projectile speed by 100% and distance limit by 20%
+	added sp1 tilt (in white)
+	sp1 tilt can combo into an sp1 with a microwalk
+	reduced timestop on sp1 tilt
+	[raw 992+ 1051 + 1107: removed P000_sk1_00 animation to clean up tilt sp1]
+
+
+Sosuke Aizen(Changes made by Bergen):
+General Changes:
+	increase the max speed Aizen can generate flames from 0.004 -> 0.006 (UV1)
+	increased how fast aizen loses guard gauge when escudo is active (10 -> 13) (UV6)
+	removed timestop from base and evo sp1: speed(0.001 -> 0.1)
+base:
+	reduced the timer until Aizen can evolve into his cocoon form from 7200 -> 4200 (120 seconds -> 70 seconds) (UV4)
+	reduced heavy 2 (all variations) damage by 15% 
+	reduced the recovery on the frontstep from 42 -> 38
+cocoon:
+	fighting spirit required to go from cocoon -> evo reduced from 2.0 -> 1.7
+	changed the guardstun on the tilt from 28 to 33 to make it plus on block
+evo:
+	fighting spirit required to go from evo -> sublimation increased from 2.5 -> 3.0
+	fighting spirit required to go from evo -> revo decreased from 2.0 -> 0.5
+	reduced heavy 2 (all variations) damage by 15%
+	reduced tilt 3 (Senju Koten Taihou) guard stun on the last hit from 26 -> 24.
+	reduced the recovery on the frontstep from 42 -> 30
+Rev:
+	increased HP from 10000 -> 11000
+	reduce guard damage on tilt from 400 -> 250
+	reduced heavy2 guard damage by 30%
+	increased hitstun on tilt from 20 -> 30 to make it combo with heavy.
+
+	reduced the recovery of the frontstep from 35 to 25
+	Rev: reduced the amount of pushback on his 5th and 4th hit to stop it from dropping against certain characters (6.0 -> 4.0)
+
+	
+	
+	
+
+Unohana (Changes by Nilsix):
+	EVO:
+		Light1 : 
+			pushbock : 0.25 -> 0.4
+
+
+NNoitra (changes made by Nilsix):
+	Base: 
+		startup : 68 -> 71
+	Base:
+		dash attack 
+			blockstun : 28->25
+	Evo : 
+		dash attack 
+			blockstun : 28->21
+	SP2:
+		Evo : 
+		startup : 
+			startup : 68 -> 70
+
+	These changes removes Nnoitra's ability to do his dash light-> sp2 unblockable setup
+	he is still + on block after dash light, against all tiers of jabs
+
+Szayelporro Grantz (changes made by Bergen):
+General Changes:
+	increased recovery on SP2 from 80 -> 100
+	dash light guard stun increased from 18 -> 20 and recovery decreased from 52 -> 42 to make it safe on block 
+
+Base:
+	FS required to go from base to awakening changed from 3.0 -> 2.75
+Evo:
+	sig recovery increased from 56 -> 86 on whiff
+	sig (level 1 + level 2) fighting spirit gain increased by 20% on hit
+
+Toshiro (changes made by Nilsix): 	
+	EVO : 
+		SP2 : 
+			plus on block -> unsafe on block 
+Notes : 
+Toshiro's SP2 was way too versatile : dp, damage dealer, charge his ice bar, + on block (mixup tool) so we are now adding risk to throwing SP2
+
+Shunsui (changes made by Nilsix): 
+	BASE AND EVO : 
+		light 1 : 
+			guard damage : 175 -> 25
+		light 2 :
+			guard damage : 175 -> 25
+		light 3 :
+			guard damage : 300 -> 100
+		heavy 1 :
+			guard damage : 225 -> 50
+		heavy 2 :
+			guard damage : 750 -> 300
+		SP2 : 
+			blockstun : 22 -> 0
+			now unsafe on block 
+	EVO : 
+		light3 : 
+			pushback on hit : 2 -> -1 
+			fixed an issue where light3->sp1 wouldn't combo against some characters
+	
+	Shunsui stays relatively the same but lost his ability to guard break consistently, SP2 being a fast full screen whiff punish damaging move that was safe on block made no sense balance wise so we are changing that, 
+	this technically changes nothing for good Shunsui players since they would normally whiff punish properly with it, but this prevents the move from being thrown around stupidly without any consequences
+
+
+Dangai Ichigo (changes by Nilsix and Bergen)
+FS required to go from evo -> sublimation: 4.5 -> 7.5
+Fixed a bug where he would do the full flashstep follow up string on guard instead of just the full hit.
+Fixed a bug where Dangai would be able to cancel his whiffed heavy -> Hakugeki.
+
+
+Dash Attack (all levels): 
+	slow motion rate : 2-> 1
+	his dash attack speed is now the same speed as his old dash attack
+LV1 : 
+	Fighting spirit generated to the opponent : 2.0 -> 1.0
+LVL3 :
+	Tilt : 
+		damage value : 1000 -> 1500
+		hitstun : 40 -> 35
+		Dangai cannot combo into light 1 anymore
+	SIG :
+		dash cancel : removed
+		Dangai Ihigo cannot sig->dash cancel anymore
+
+.
+Nell (changes by Nilsix and Bergen)
+
+ Amount of fighting spirit needed to go from base to evo : 2.5 -> 3
+ Added the ability to use sig right after the sp1 extension
+ Hitstun on the last hit of sp1 changed from 70 -> 35 (dash light oki)
+ Hitstun on the last hit of sp1 extension changed from 50 -> 70 (can loop with sig cancels)
+
+
+YWACH (Changes Made by Bergen and Goose)
+
+### General Changes
+
+Gave Yhwach 9 stocks
+
+removed SP2 timestop (Changed recovery from 80 -> 88)
+increase SP regen on his lights by 30% across all modes:
+light1 SP regen rate 4.0 -> 5.2
+light2 SP regen rate 2.0 -> 2.6
+light3(base) SP regen rate 6.0 -> 7.8
+light3 (evo) SP regen rate 5.5 -> 7.15
+light3 (rev) SP regen rate 6.0 -> 7.8
+heavy 1 and heavy 2 SP regen reduced by 20% across all modes 
+### Base
+reduced heavy 2 hit pushback from 2.0 and 1.0 -> 0.2 and 0.5 respectively on the last 2 hits of the heavy 2 for consistency.
+reduced guardstun on the second light from 38 -> 31 to make it minus on block (loses to tier 3 lights)
+
+Sankt Altar (SP1 Tilt Up):
+  Increased blockstun from 30 to 40, making it plus on block to allow for mixups and pressure.
+
+### Awakening
+
+Sankt Altar (SP1 Tilt Up):
+
+   Increased blockstun from 30 to 40, making it plus on block to allow for mixups and pressure.
+   Increased damage from 2000 on hit to 3000 and decreased the scaling so the minimum damage is 2000 on hit.
+
+Tilt:
+
+   Increased hitstun from 40 → 50 to combo with light attack.
+   reduced damage by 20%
+
+Signature (Neutral):
+
+ * reduced pushback on the projectile from 1.0 -> 0.5 and the sword from 2.0 -> 1.0
+
+### Reawakening
+
+Sankt Altar (SP1 Tilt Up):
+
+Increased blockstun from 30 to 40, making it plus on block to allow for mixups and pressure.
+Increased damage from 2000 on hit to 4000 and decreased the scaling so the minimum damage is 3000 on hit
+
+Signature (Neutral):
+
+  * reduced pushback on the projectile from 1.0 -> 0.5 and the sword from 2.0 -> 1.0
+
+
+
+Yoruichi (changes made by Nilsix and Bergen):
+    Base:
+        Changed her first part of the flashmaster sp1 (neutral and combo variants) into the non-flashmaster sp1 to fix a         healing reverse issue
+        sp_atk01 damage increased from 250 -> 800 (175 per hit 4 times since hit_count was changed from 1 -> 4 +             hit_stop_speed from 0.05 -> 0.25 to fix the animation)
+        sp_atk01_2 damage reduced from 900 -> 400 (133.33 per hit) to match the original damage
+        sp_atk01_2_0 damage increased from 900 -> 950 (333.33 per hit) to match the original damage
+    Base and Evo : 
+        Light1 
+            Rotate Speed : 0->2 
+            "Yoruichi can now punish flashsteps"            "Yoruichi can now punish flashsteps"
+        SP2 
+            speed: 0.001 -> 1.000
+            "Consistency fix for all sp counters"
+    Evo :
+        Forward sig : 
+            blockstun 14->9
+        "anken->forward dash is unsafe now"
+        SP1 (flashmaster):
+            hitstun 50->42
+            "Altough it's also a damage nerf because she cannot do sp1 (flashmaster) -> heavy (she can still light), the main goal of that hitstun nerf is to remove the sp1 (flashmaster) -> tilt unblockable without needing to reduce the speed of her tilt
+        Flashstep followup (last hit) : 
+            hitstun : 36->31
+        "Flashstep followup -> dash light is still an oki, but now she cannot do flashstep followup -> yellow"
+Notes : 
+anken dash was a tool that allowed a rushdown character to play like a zoner that turn into a mix up demon, not only does she keeps you away but anken dash also allowed you to win neutral into a free mixup,
+this was deemed too much now that she can punish flashstep, this will encourage yoru players to get in more using her close options, the way a rushdown character should bethis was deemed too much now that she can punish flashstep, this will encourage yoru players to get in more using her close options, the way a rushdown character should be
+
+	
+
+
+Mayuri (changes made by Nilsix) : 
+	dash light[1] (base and evo):
+		pushblock : 0 -> -0.5
+	dash light[2] :
+		pushblock = 1 - -0.5
+
+	Mayuri can now properly mixup after hitting both hit of a dash light on block
+
+
+GRIMMJOW (changes made by Nilsix) :
+	Base and evo : 
+		dash attack : 
+			whiff recovery : 28->31
+	grimm's dash light is a button that does everything, I am nerfing it's whiff recovery to make it slightly riskier to throw out on whiff
+
+	Evo : 
+	sp1 (during sp2 rage):
+		removed command grab frames
+	with the way his sp1 works while in sp2 rage, it was kinda impossible to make it flashstepable so the only band-aid I found was so remove the command grab frames altogether sadly
+
+
+
+ISHIDA URYU (Rework by Bergen)
+
+==================== GENERAL ====================
+FS gain reduced by 20% for:
+light 1-3, heavy 1-2, tilt and charged tilt, flashstep followup, grab
+
+FS gain in Reishi Concentration State (SP2) in evo doubled for:
+heavy1-2, tilt, charged tilt
+
+SP2:
+DP (invincible after 4 frames of activation), hits from behind, +28% damage
+
+==================== BASE ====================
+Light range: 2.0 -> 2.2
+
+SP2:
+- DP (invincible after 5 frames of activation)
+- homing ON (10 ->30)
+- hitstun 52 -> 40
+- guardstun reduced to 05
+- explosion radius 2.2 -> 4.2
+- Z pos -0.2 -> -2.2
+- changed the speed at which the world revolves for the counter section of the dp from 0.001 to 1.0 to combat a bug where Uryu was able to punish 99% of characters for their light string on guard
+
+==================== AWAKENING ====================
+FS required to go from awakening to sublimation: 3.0 -> 4.5
+FS gain SP1: 0.02 -> 0.04
+SP1 range: 8 -> 10 (to stop it from dropping after heavy 2 at max range)
+Light range: 1.7 -> 2.0
+Signature (in SP2 mode active): fighting spirit reduce from 0.005 + 0.08 -> 0.0025 + 0.04
+
+flashstep followup on guard being unsafe bug:
+- Changed CancelTiming and ComboStart from on the first hit of the flashstep followup from |B to B 
+- reduced guardstun on the first hit of the flashstep followup from 25 -> 24 to make him trade with tier3 lights
+
+SP2:
+- DP (invincible after 5 frames of activation)
+- homing (speed of XY: 30)
+- hitstun 80 -> 40
+- guardstun reduced to 05
+- collision explosion size 4.2 -> 7.0
+- collision Z pos -0.2 -> -4.2
+- changed explosion size to from (1.0,1.0,1.0) -> (1.5,1.5,1.5)
+- changed the position from (0.0,0.0,0.0) -> (0.0,-1.4,-1.0)
+- dmg 800+1000 -> 1000+1300
+- fighting spirit 0.05 -> 0.20
+- changed the speed at which the world revolves for the counter section of the dp from 0.001 to 1.0 to combat a bug where Uryu was able to punish 99% of characters for their light string on guard
+
+==================== REAWAKENING ====================
+
+FS required to go from Sublimation->Reawakening: 1.4 -> 4
+Light range: 1.7 -> 2.0
+Steps: 1.2 -> 1.4
+FF Down finisher hit stun: 40 -> 48 (consistency fix with UP Flashstep follow up)
+
+flashstep followup on guard being unsafe bug:
+- Changed CancelTiming and ComboStart from on the first hit of the flash step follow-up from |B to B 
+- reduced guard stun on the first hit of the flashstep follow-up from 25 -> 24 to make him trade with tier3 lights
+
+Heavy1:
+- homing ON (speed of XY: 80)
+SP1 Maximum Guaranteed Damage increased:
+- 540 -> 800 (max damage is 1800)
+- Turned on homing for charged tilt (speed of XY: 100)
+
+- heavy1, heavy2, light2, light3, tilt and charged tilt guard damage increased by 10%
+
+SP1 range: 11 -> 15 (to stop SP1 from dropping after heavy 2)
+SP2:
+- DP (invincible after 5 frames of activation)
+- homing ON (speed of XY: 30)
+- hitstun 82 -> 40
+- guardstun reduced to 05
+- collision explosion radius 4.2 -> 7.2
+- collision Z pos -0.2 -> -3.6
+- changed explosion size to from (1.0,1.0,1.0) -> (1.525,1.525,1.525)
+- changed the position from (0.0,0.0,0.0) -> (0.0,-1.4,-1.0)
+- explosion damage_move_rate: 1.0 -> 0.5
+- dmg 1200+3500 -> 2800+2800
+- explosion guard damage reduced from 800 -> 600 (25%)
+- changed the speed at which the world revolves for the counter section of the dp from 0.001 to 1.0 to combat a bug where Uryu was able to punish 99% of characters for their light string on guard
+
+
+
+
+
+RANGIKU (changes made by Bergen) :
+	Base and Evo SP1 timestop removed (speed 0.001 -> 1.0)
+	Amount of fighting spirit required to go from evo -> sublimation increase from 
+	Signature (evo):
+		Level 1: guard damage 75-> 50 + chip damage reduced by 30% + lifetime reduced from 600 -> 300
+		Level 2: guard damage 75-> 50 + chip damage reduced by 30% + damage increased from 100 -> 200
+		Level 3: chip damage: reduced by 30% + lifetime reduced from 600 -> 400
+	SP2 (evo):
+		timestop speed : 0.001 -> 0.1
+	she cannot timestop anymore
+		guard damage : 100 -> 30
+		chip damage: reduced by 50%
+	heavy 1 (evo):
+		guard damage : 200 -> 160
+	
+	heavy 2 (evo):
+		guard damage : 600 -> 400
+
+
+GIN (changes made by Nilsix) :
+	BASE AND EVO :
+	SP1 :
+		Removed timestop on the counter (speed 0.001 -> 1.00) 
+	SP2 : 
+		Fixed a bug where you can hold grab dash and sp2 during it's animation
+	light1 : 
+		RotateSpeed : 0->2
+		Gin can now punish flashsteps and sidesteps with light1
+	SP2:
+		blockstun : 20->0
+		whiif recovery : 121 -> 140
+	Flashstep :
+		frames : -1-> 9
+
+	Gin's flashstep can now be punished
+
+	Base: 
+		Dash attack : 
+			Gin cannot whiff his dash attack and then cancel it into sig
+		Tilt (tip) :
+			Hitstun : 30->33
+			Gin can now consistently combo tilt (tip)->heavy in base
+
+	EVO : 
+		tilt :
+			step cancelling : removed
+			can still tilt-> sig cancel (only on block/hit)
+
+		being able to whiff tilt into movement was kinda stupid and rewarded dumb plays, especially since gin already has mobility, you now need to think more about your tilt spacing because you cannot whiff cancel it anymore
+		
+
+
+TOSEN (changes made by Nilsix) : 
+	Health (evo) : 10000 -> 11000
+	damage_resistance : 1 -> 2
+Tosen kit already works really well (good neutral tool,mixups,counters), he just needs a slight boost in health and resistance to make him more consistent
+
+Ichigo (Bankai) (changes made by Nilsix): 
+
+Sig (SP2) (evo):
+	damage : 800 -> 400
+	guard damage : 140 -> 50
+	fighting spirit gain : 0.1 -> 0.01
+
+heavy 1 (evo): 
+	fighting spirit gain : 0.12 -> 0.02
+	guard damage : 550-> 300
+	damage : 840 -> 740
+
+heavy 2 (evo):
+	guard damage : 1400 -> 600
+	damage : 3100-> 2500
+	hitstun : 60->65
+	fixed an issue where heavy2 -> sp2-> combo would drop on some characters
+
+heavy 2 followup (sp2) : 
+	fs gain : 0.3 -> 0.05 
+SP2 (base and evo) : 
+time stop speed : 0.001000 -> 0.1
+
+No more timestop
+
+Vasto Lorde : 
+	light2 : 
+		blockstun : 32->30
+		not + on block anymore, lose to tier 3 jabs
+	tilt : 
+		blockstun : 20->18
+		not + on block anymore, trade with tier 3 jabs
+	SP2 : 
+		damage 1400 -> 1000
+	
+
+
+
+ULQUIORRA (changes made by Nilsix): 
+Base, Evo, Reawakening : 
+	fixed a bug where ulq could grab dash and cancel into SP2
+Base : 
+	dash light (whiff) -> hakugeki : removed
+	light1 (whiff) hakugeki : removed
+	heavy 1 (whiff) hakugeki : removed
+
+Light 1 (base evo and reawakening) : 
+	
+	rotate speed : 0 -> 2.0
+	ulquiorra can now punish flashstep
+	
+	light1 : 
+		guard damage : 175->100
+	
+	light 2 : 
+		guard damage : 175 -> 100
+	
+	Light 3 : 
+		guard damage : 300 -> 100
+
+	heavy 2 (evo) : 
+		guard damage : 700 -> 300
+	
+	Reawakening : 
+
+	heavy 2:
+		guard damage : 700 -> 300
+	
+	
+	light 1: 
+		guard damage : 175 -> 50 
+		pushblock : 0.8 -> 1
+		blockstun : 30->25
+		not + on block anymore 
+	Light 3 : 
+		guard damage : 300->100
+	sp2 :
+	timestop speed : 0.001 -> 0.1
+	cannot timestop anymore
+
+	EVO: 
+		heavy2->sig : 
+			blockstun : 36->28
+		is now minus on block (cannot step, but can flashstep)
+			
+	REAWAKENING:
+		heavy2->sig:
+			blockstun : 38->35
+			is now minus on block (can step and flashstep, but cannot mash)
+
+HALIBELL (changes made by Efra and Nilsix): 
+
+BASE:
+	SP1 (air) (yellow) : 
+		Hitstun : 72-> 67
+		can only combo into sig light
+EVO:
+	dash attack : hitbox coll radius 2.5->1.8
+
+	Light3 : 
+		blockstun : 34->33 (light3 is now 0 on block when she is yellow)
+
+	Heavy 1:
+		Whiff recovery : 50 -> 60
+	
+	Tilt:
+		hitstun 39 -> 40
+		makes tilt-> sig light more consistent while in yellow
+
+	SP1 (air) (yellow) : 
+		Hitstun : 72->67 
+		can only combo into sig light
+		
+	
+	
+
+
+	Notes : 
+Hali was doing everything,her neutral presence with dash light was too strong and she could then convert that into really strong pressure, as well as having TOD levels of damage, we are tuning both of those things down, which is fine because her buttons are still great, she still has great oki, but her damage definetely got gutted in a huge margin.
+With her whiff recovery nerf on her heavy 1, hali now has a clearer weakness, do not whiff with her
+
+
+
+==========
+pl022
+==========
+Base :
+	Fixed a bug where you could hold grab dash and cancel it into sp1
+
+020 <<Byak base light 3 sword form>>
+
+	fix_time
+	30->27 				(reduces hitstun of light 3 to remove infinite bug bug on strikeback)
+
+=================================================================================
+026 <<Byak base hoho follow-up petals down>>
+
+	raw[265] <<add_bomb_hit_stop_damage_only>>
+	1->0				(Adds hitstun to Byakuya on sakura downwards hoho-followup to prevent sp1 continuation)
+
+=================================================================================
+030 <<Byak Base SP2>>
+
+	raw[025] <<speed>>
+	0.001000 -> 1.000000 		(Adjusts game speed during SP2 activation to be normal time to prevent timestop)
+
+	raw[029] <<end_change_speed>>
+	0.200000 -> 1.000000		(Adjusts game speed mid SP2 activation to be normal time to prevent jank)
+
+=================================================================================
+031 <<Byak Base SP2>>
+
+	raw[55] <<collision angle>> 	
+	90 -> 360			(Improves reliability of counter hit connecting)
+
+	raw[609] pos 			
+	3.5 -> -3			(Adjusts Byakuya's arrival position after SP2 activation for aura purposes)
+
+================================================================================
+100 <<Byak Evo Heavy>>
+
+	coll_pos (1,2,3)
+	z 5->5.8			(Adjusts heavy hitbox position to increase deadzone size)
+
+	raw[050] <<pos>>
+	pos z -5 -> -12   		(Adjusts animation to attempt to match hitbox)
+	raw[054] <<ros>>
+	scl z 1.8 -> 3			(Adjusts animation to attempt to match hitbox)
+
+=================================================================================
+099 <<Byak Evo Grab>>
+	
+	raw[642] <<pos>>
+	z -2 -> -2.4			(Adjusts Byakuya's placement after a successful grab to maintain heavy combo after minimum range increased)
+=================================================================================
+111 <<Byak Evo SP1>>
+
+	raw[2493] <<heal_val>>
+	0.1 -> 0.0			(Removes the reverse regeneration for the second portion of Byakuya's awakened SP1)
+=================================================================================
+112 <<Byak Evo SP2>>
+
+	raw[026] <<speed>>
+	0.001000 -> 1.000000 		(Adjusts game speed during SP2 activation to be normal time to prevent timestop)
+
+	raw[030] <<end_change_speed>>
+	0.200000 -> 1.000000		(Adjusts game speed mid SP2 activation to be normal time to prevent jank)
+
+
+=================================================================================
+113 <<Byak Evo SP2>>
+
+	raw[52] <<effect hitbox>>	
+	xyz all 2->4     		(increases hitbox size of SP2 damage portion, just to avoid jank)
+
+	raw[56] <<collision angle>>
+	90->360				(Improves reliability of counter hit connecting)
+
+	raw[554] <<pos>>		
+	z 3.5 -> -3			(Adjusts Byakuya's arrival position after SP2 activation for aura purposes)
+
+=================================================================================
+122 <<Byak Evo Hakgeki>> (down)
+
+	raw[876] <<max_dist>>		
+	3.5 -> 4.7			(Adjusts the movement distance of Byakuya for the in-combo Hakugeki to correctly connect)
+=================================================================================	
+
+124 <<Byak Evo Hakgeki>> (up)
+
+	raw[876] <<max_dist>>	
+	3.5 -> 4.7			(Adjusts the movement distance of Byakuya for the in-combo Hakugeki to correctly connect)
+
+	
+
+
+
+SOI FON (changes made by Nilsix):
+	fighting spirit needed to reach evo : 3-> 5
+	fighting spirit needed to reach sublimation: 3.75 -> 4.25
+	BASE AND EVO : 
+		light1 : 
+			recovery : 25 -> 28
+	SP1 (evo) :
+		hitstun : 68->40 (ankenless sp1 loops are gone)
+		minimum damage scaling : 180 -> 0
+	Flashstep : 
+		frames : -1 -> 9
+	Soi fon flashstep is now slower and can consistently be punished
+
+
+Notes : 
+Soi fon was doing everything while not thinking much about her anken managament, 
+she could just mix up with anken and at the same time get insane damage with ankenless sp1 loops.
+Now if Soi Fon want to mix with anken, she has to accept that she will lose damage on the sp1 loops.
+
+
+KISUKE (changes made by Nilsix):
+Fixed a bug where Kisuke was able to can the whiff of a heavy1 -> Hakugeki
+increased the recovery on kisuke's heavy 1 from 48 -> 55 
+
+light1 -> whiff cancel -> hakugeki : removed
+dash light -> whiff cancel -> hakugeki : removed
+
+	Light 1 and Light 1[SP2] (base and evo) :
+		Rotate speed : 0->2
+	Kisuke can now punish Flashsteps
+
+
+
+
+
+
+
+
+SHUHEI Changes(by efra):
+
+
+Base & Awakening:
+
+Back Step Cancel Timing has been reduced from 52 -> 42
+Notes: Shuhei is all about zoning with his buttons but due to the slower back step cancel compared to the rest of the cast, he could not zone effectively. He would be forced to stand still at medium ranges due to being punished from moving very easily. To make his movement less punishing as well as increase his zoning potential, this change was made to speed up his back dash.
+
+Heavy Tilt guard stun from hit 2 has been increased from 20 -> 24
+Notes: This change was made so shuhei is able to block after this move is blocked. He would previously get punished for free with many different buttons and moves. This change gives shuhei more advantage without it becoming problematic.
+
+Light 3 guard damage has been reduced from 300 -> 150
+Notes: Guard damage and guard break setups are a big problem on some characters and shuhei is one of them. He uses a mix of all of his buttons to get guaranteed hakugeki break setups to take free health stocks. To avoid this, guard damage was reduced to mitigate this style of play.
+
+Sig cancel timing was reduced from 52 -> 32
+Sig hit and guard stun was increased. (Base: Hit Stun 46 -> 47, Guard Stun 38 -> 47. Awakening: Hit Stun 36 -> 47, Guard Stun 28 -> 47)
+Notes: Shuhei's sig both during hit and on block was negative enough to be freely punished by whatever move an opponent desired. Not only does this make this move one of the worst moves in the game, it made this button useless for shuhei. Cancel timing was reduced due to coding of directly being tied to cancel recovery. To not make shuhei very plus off this new cancel timing, adjusting hit and guard stun was necessary. With both changes together, shuhei is no longer punishable on hit or block but is also not plus enough to press any button or step in any direction.
+
+SP1 (0-5 fear in base/ 3-8 fear in awakening [White Fear]) fighting spirit gain has been decreased from 0.3 -> 0
+Notes: This change was done to fix a bug where sometimes in neutral shuhei would get and give a lot more fighting spirit than intended. To mitigate this bug from happening and considering current universal fighting spirit changes, this was the best course of action.
+
+SP1 (10+ fear in base/13+ fear in awakening [Red Fear]) guard damage from Hit 1 and 2 has been reduced from 150 -> 000	
+Notes: Guard damage and guard break setups are a big problem on some characters and shuhei is one of them. He uses a mix of all of his buttons to get guaranteed hakugeki break setups to take free health stocks. To avoid this, guard damage was reduced to mitigate this style of play.
+
+SP2 start up speed was increased from 0.001 to 1.0
+Notes: Due to the amount of slow down this move had, opponents would buffer a move but would not come out. This sp move is a counter so this act of eating an input hurts shuhei since he no longer counters a button that should've come out. With the speed increase, if an opponent presses a button while shuhei's sp2 is active, the button will come out.
+
+Base:
+
+Heavy 2 Guard damage from Hit 1 & 2 has been reduced from 200 -> 90
+Hit 3 guard damage has been reduced from 250 -> 140.
+Notes: Guard damage and guard break setups are a big problem on some characters and shuhei is one of them. He uses a mix of all of his buttons to get guaranteed hakugeki break setups to take free health stocks. To avoid this, guard damage was reduced to mitigate this style of play.
+
+Awakening:
+
+Heavy 2 guard damage from Hits 6 & 7 has been reduced from 300 -> 150.
+Notes: Guard damage and guard break setups are a big problem on some characters and shuhei is one of them. He uses a mix of all of his buttons to get guaranteed hakugeki break setups to take free health stocks. To avoid this, guard damage was reduced to mitigate this style of play.
+
+
+
+
+
+
+
+
+
+
+Kenny changes (by efra):
+
+
+Base & Awakening:
+
+Heavy 1 guard damage was reduced from 225 -> 100
+
+Light 1 guard damage was reduced from 175 -> 85
+
+Light 2 guard damage was reduced from 175 -> 85
+
+Light 3 guard damage was reduced from 300 -> 150
+Notes: Guard damage and guard break setups are a big problem on some characters and kenny is one of them. He uses a mix of all of his buttons to get guaranteed hakugeki break setups to take free health stocks. To avoid this, guard damage was reduced to mitigate this style of play.
+
+
+Base:
+
+Heavy 2 guard damage on hit 1 & 2 was reduced from 150 -> 50
+Guard damage from hit 3 was reduced from 400 -> 200
+
+SP1 guard damage from hit 1 was reduced from 300 -> 100
+Notes: Guard damage and guard break setups are a big problem on some characters and kenny is one of them. He uses a mix of all of his buttons to get guaranteed hakugeki break setups to take free health stocks. To avoid this, guard damage was reduced to mitigate this style of play.
+
+Awakening:
+
+Heavy 2 guard damage from hits 1-8 were reduced from 75 -> 15 each
+Guard damage from hit 9 was reduced from 400 -> 200
+
+SP1 guard damage from hits 1 & 2 were reduced from 210 -> 120
+Notes: Guard damage and guard break setups are a big problem on some characters and kenny is one of them. He uses a mix of all of his buttons to get guaranteed hakugeki break setups to take free health stocks. To avoid this, guard damage was reduced to mitigate this style of play.
+
+
+
+
+
+
+Stark changes (by efra)
+
+
+Base:
+
+Unique Value 8 was changed from 90 -> 80
+Notes: This makes sig charge ramp up faster, which gives stark more charge when reloading for longer periods
+
+Light 1 push back on guard was increased from 0.5 -> 0.8
+
+Light 2 push back on guard was increased from 1 -> 1.5
+Notes: Stark had a true infinite block string in base which was impossible to get out of (other than blue). To mitigate this playstyle, block push back was increased by little amounts so the loop is no longer an infinite and doesn't give stark too much free space from it.
+
+
+Heavy 2 guard damage from hits 1 & 3 were reduced from 225 -> 125
+Guard damage from hits 2 & 4 were reduced from 250 -> 150
+Notes: This move does not have an sp2 variant in the code yet so this change also affects him without sp2. Stark's guard break potential in neutral was strong due to the amount of guard the second hit of heavy did. This change helps keep heavy 2 in check while still taking the same amount of sp to do the move. This move will unlikely be used outside of sp2 which already limits this move's guard break potential
+
+
+SP1 damage was increased across the board, damage depends on the version used
+SP1 (50-87sp when activated) damage was increased from 1000 -> 2500
+SP1 (88-124sp when activated) damage was increased from 250 x 3 (750 total) -> 550 x 3 (1650 total)
+SP1 (125+sp when activated) damage was increased from 150 x 7 -> 350 (1050 total) -> x 7 (3500 total)
+Notes: SP2 was the only option stark goes for in normal/optimal play. We wanted to give a reason to use sp1 more often. To give incentive to use this button, damage was increased across the board, with much more damage being given the more sp stark has before sp1 usage. This scale in damage makes it so stark doesn't have a damaging dp when low in sp, likely due to high opponent pressure.
+
+
+SP2 speed was increased from 0.001 -> 0.1
+Notes: Due to the high amounts of screen slow down when using sp2, this button was used for an un-counterable mix that happened when dashing into opponents. To mitigate this, speed was increased so using this move as free mix is way harder to time and do, with most results ending in stark getting hit.
+
+While SP2 is active:
+
+Heavy 1 guard damage was reduced from 250 -> 0
+
+Heavy Tilt guard damage was reduced from hit 2 300 - 150
+Hit 4 240 -> 140
+Notes: These moves had versions already connected to sp2. All buttons were intended to be sp2 active only changes but due to limitations, base form is tweaked. Due to guard break potential being high when sp2 is active, guard damage was reduced to give opponents more of a fighting chance in neutral to outlive sp2.
+
+
+Awakening:
+
+Dash Light guard damage was reduced from 175 -> 100
+
+Heavy 1 guard damage was reduced from 225 -> 100
+
+Heavy 2 guard damage from hits 1 & 3-5 were reduced from 100 -> 50
+Hit 2 reduced from 200 -> 100
+Wolf hits guard damage reduced from 100 -> 0
+
+Light 2 guard damage reduced from 175 -> 100
+
+Light 3 guard damage reduced from hits 1 & 2 150 -> 75
+Notes: Guard damage and guard break setups are a big problem on some characters and kenny is one of them. He uses a mix of all of his buttons to get guaranteed hakugeki break setups to take free health stocks. To avoid this, guard damage was reduced to mitigate this style of play.
+
+Wolves thrown after a button increased push back from 0.7 -> 3.0
+Notes: Stark had free loops after throwing a wolf on block and that was a big part in guard break setups. Push back was increased so loops will no longer happen for free.
+
+
+Ikkaku Changes (By RedZekrom913)
+
+Awakening: 
+
+	Changed damage_move_rate on SP1 heavy from 1.0 to 0.05 and coil_radius from 2.8 to 3.3 to make his SP! heavy into SP1 light loops consistently work against all characters
+
+
+
+
+
+
+Shinji Changes (By RedZekrom913) 
+General:
+	Can now combo heavy after a successful sig counter
+	Fixed spacing and frame data when Sakanade is active
+	Changed guard_fix_time on special flash from 24 to 29 to make it plus on block giving similar plus frames as light 3.
+	Increased movement speed by 10%
