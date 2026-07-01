@@ -78,6 +78,7 @@ class Reporter:
         self._tk = None
         self._label = None
         self._root = None
+        self._bar = None
 
     def __enter__(self):
         try:
@@ -97,9 +98,9 @@ class Reporter:
             self._label = tk.Label(self._root, text="Checking for updates...",
                                    wraplength=400, justify="center")
             self._label.pack(expand=True, fill="both", padx=12, pady=(16, 4))
-            bar = ttk.Progressbar(self._root, mode="indeterminate", length=380)
-            bar.pack(pady=(0, 14))
-            bar.start(12)
+            self._bar = ttk.Progressbar(self._root, mode="indeterminate", length=380)
+            self._bar.pack(pady=(0, 14))
+            self._bar.start(12)
         except Exception:
             self._root = None       # headless / no Tk -> stdout fallback
         return self
@@ -136,6 +137,11 @@ class Reporter:
 
     def __exit__(self, *exc):
         if self._root is not None:
+            try:
+                if self._bar is not None:
+                    self._bar.stop()     # cancel the pending autoincrement job
+            except Exception:
+                pass
             try:
                 self._root.destroy()
             except Exception:
